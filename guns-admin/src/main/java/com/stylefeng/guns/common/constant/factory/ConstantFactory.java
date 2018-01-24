@@ -155,7 +155,7 @@ public class ConstantFactory implements IConstantFactory {
      * 获取菜单名称
      */
     @Override
-    public String getMenuName(Integer menuId) {
+    public String getMenuName(Long menuId) {
         if (ToolUtil.isEmpty(menuId)) {
             return "";
         } else {
@@ -305,7 +305,7 @@ public class ConstantFactory implements IConstantFactory {
 
         ArrayList<Integer> deptids = new ArrayList<>();
 
-        if(depts != null || depts.size() > 0){
+        if(depts != null && depts.size() > 0){
             for (Dept dept : depts) {
                 deptids.add(dept.getId());
             }
